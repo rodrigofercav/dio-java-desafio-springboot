@@ -12,11 +12,10 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Instrutor {
+public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @OneToOne
     private Pessoa pessoa;
-    private String crefito_cref;
 }

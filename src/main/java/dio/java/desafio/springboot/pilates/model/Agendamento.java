@@ -1,10 +1,11 @@
 package dio.java.desafio.springboot.pilates.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,11 +13,11 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Instrutor {
+public class Agendamento {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @OneToOne
-    private Pessoa pessoa;
-    private String crefito_cref;
+    private Instrutor instrutor;
+    private Cliente cliente;
+    private Date dataHora;
 }
